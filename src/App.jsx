@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import NotesPage from './pages/NotesPage'; 
-import NoteProvider from './context/NoteContext';
+import NoteProvider from './context/NotesContext';
 
 
 function App() {
