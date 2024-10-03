@@ -11,8 +11,7 @@ const Color = ( {color}) => {
         try {
             const currentNoteIndex = notes.findIndex( 
                 (note) => note.$id === selectedNote.$id 
-            )
-
+            );
             const updatedNote = {
                 ...notes[currentNoteIndex],
                 colors: JSON.stringify(color)
@@ -39,4 +38,4 @@ const Color = ( {color}) => {
     );
 };
 
-export default Color
+export default Color;

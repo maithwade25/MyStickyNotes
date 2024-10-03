@@ -9,9 +9,7 @@ import { NoteContext } from '../context/NotesContext';
 const NoteCard = ({note}) => {
     const [saving, setSaving] = useState(false);
     const keyUpTimer = useRef(null);
-
     const { setSelectedNote } = useContext(NoteContext);
-
     const body = bodyParser(note.body);
     const [position, setPositon] = useState(JSON.parse(note.position));
     const colors = bodyParser(note.colors);
@@ -19,8 +17,7 @@ const NoteCard = ({note}) => {
     let mouseStartPos = { x:0, y:0};
     const cardRef = useRef(null);
 
-    const textAreaRef = useRef(null)
-
+    const textAreaRef = useRef(null);
     useEffect(() => {
         autoGrow(textAreaRef);
         setZIndex(cardRef.current);
@@ -63,14 +60,13 @@ const NoteCard = ({note}) => {
 
     const saveData = async (key, value) => {
         const payload = {[key]:JSON.stringify(value)};
-
         try {
             await db.notes.update(note.$id, payload);
         } catch(error) {
             console.log('Error:', error);
         }
         setSaving(false);
-    }
+    };
 
     const handleKeyUp = () => {
         setSaving(true);
@@ -82,7 +78,7 @@ const NoteCard = ({note}) => {
         keyUpTimer.current = setTimeout(() => {
             saveData('body', textAreaRef.current.value);
         }, 2000);
-    }
+    };
 
     return (
         <div 
@@ -122,7 +118,7 @@ const NoteCard = ({note}) => {
                 </textarea>
             </div>
         </div>
-  );
+    );
 };
 
-export default NoteCard
+export default NoteCard;

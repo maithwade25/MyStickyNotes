@@ -1,6 +1,6 @@
 import AddButton from "./AddButton";
 import colors from "../assets/colors.json";
-import Color from "./color";
+import Color from "./Color";
 
 const Controls = () => {
   return (
@@ -13,4 +13,4 @@ const Controls = () => {
   )
 }
 
-export default Controls
+export default Controls;

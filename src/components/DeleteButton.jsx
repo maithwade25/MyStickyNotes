@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Trash from '../icons/Trash';
 import { db } from '../appwrite/databases';
 import { useContext } from 'react';
@@ -21,4 +21,4 @@ const DeleteButton = ({noteId}) => {
   )
 }
 
-export default DeleteButton
+export default DeleteButton;
