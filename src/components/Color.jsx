@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { NoteContext } from '../context/NoteContext';
+import { NoteContext } from '../context/NotesContext';
 import { db } from '../appwrite/databases';
 
 const Color = ( {color}) => {

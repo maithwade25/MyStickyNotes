@@ -4,7 +4,7 @@ import colors from '../assets/colors.json';
 import { useRef } from 'react';
 import { db } from '../appwrite/databases';
 import { useContext } from "react";
-import { NoteContext } from "../context/NoteContext";  
+import { NoteContext } from "../context/NotesContext";  
 
 
 const AddButton = () => {

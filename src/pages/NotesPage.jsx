@@ -2,7 +2,7 @@
 import NoteCard from '../components/NoteCard';
 import Controls from '../components/Controls';
 import { useContext } from 'react';
-import { NoteContext } from '../context/NoteContext';
+import { NoteContext } from '../context/NotesContext';
 
 const NotesPage = () => {
 
